@@ -11,7 +11,7 @@ import os
 
 load_dotenv()
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 os.environ["OPENAI_API_KEY"] = ""
 
@@ -28,7 +28,7 @@ def clear_submit():
 
 
 
-llm = OpenAI(api_token=openai.api_key)
+llm = OpenAI(api_token=openai_api_key)
 
 
 lista_arquivo = ['Excel', 'CSV']

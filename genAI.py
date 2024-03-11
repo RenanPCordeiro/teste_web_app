@@ -11,9 +11,9 @@ import os
 
 load_dotenv()
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
 os.environ["OPENAI_API_KEY"] = ""
+
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 mylist = ["grafico", "gráfico", "GRAFICO", "GRÁFICO", "barras", "chart", "graph", "bar chart", "line chart", "plot", "PLOT", "plote", "PLOTE"]
 
@@ -28,7 +28,7 @@ def clear_submit():
 
 
 
-llm = OpenAI(api_token=openai_api_key)
+llm = OpenAI(api_token=openai.api_key)
 
 
 lista_arquivo = ['Excel', 'CSV']

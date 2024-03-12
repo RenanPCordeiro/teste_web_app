@@ -11,7 +11,9 @@ import os
 
 load_dotenv()
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+#os.environ["OPENAI_API_KEY"]
 
 mylist = ["grafico", "gráfico", "GRAFICO", "GRÁFICO", "barras", "chart", "graph", "bar chart", "line chart", "plot", "PLOT", "plote", "PLOTE"]
 
